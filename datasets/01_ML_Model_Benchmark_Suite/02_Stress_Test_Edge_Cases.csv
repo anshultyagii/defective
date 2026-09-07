@@ -1,0 +1,9 @@
+component_id,lot_id,value_0h,value_24h,value_96h,max_temp_early,edge_case_description,expected_decision
+EDGE-ZERO-DRIFT,LOT-EDGE,10.0,10.0,10.0,25.0,"Perfect zero drift, 25C room temp",PASS
+EDGE-MICRO-DRIFT,LOT-EDGE,10.0,10.005,10.01,45.0,Sub-0.1% micro drift,PASS
+EDGE-HIGH-TEMP-PASS,LOT-EDGE,10.0,10.01,10.02,85.0,Normal resistance at elevated thermal soak,PASS
+EDGE-SUB-THRESHOLD-DRIFT,LOT-EDGE,10.0,10.15,10.3,50.0,3% drift (below 5% safety limit),PASS
+EDGE-EXCESSIVE-EARLY-DRIFT,LOT-EDGE,10.0,11.2,12.5,110.0,12% early drift (exceeds safety limit),FLAG
+EDGE-THERMAL-EXCURSION,LOT-EDGE,10.0,10.8,11.5,195.0,195C thermal shock trip,FLAG
+EDGE-NEGATIVE-DRIFT,LOT-EDGE,10.0,9.95,9.9,45.0,Negative parameter relaxation (-1%),PASS
+EDGE-EXTREME-SPIKE,LOT-EDGE,10.0,35.0,65.0,210.0,Massive gate rupture (+550%),FLAG

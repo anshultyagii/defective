@@ -1,0 +1,157 @@
+.drift-predictor-card {
+  margin-top: 24px;
+}
+
+.drift-empty-card {
+  margin-top: 24px;
+  padding: 32px;
+  text-align: center;
+}
+
+.drift-empty-desc {
+  font-size: 14px;
+  color: var(--ink-dim);
+  margin-top: 8px;
+}
+
+.drift-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.drift-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.drift-sub {
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin: 0;
+}
+
+.drift-profile-toggle {
+  display: flex;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-tab {
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-tab:hover {
+  color: #ffffff;
+}
+
+.profile-tab.active {
+  color: #ffffff;
+}
+
+.profile-tab.tab-anom.active {
+  background: rgba(255, 122, 122, 0.2);
+  color: #ff7a7a;
+  border: 1px solid rgba(255, 122, 122, 0.4);
+}
+
+.profile-tab.tab-nom.active {
+  background: rgba(127, 224, 168, 0.2);
+  color: #7fe0a8;
+  border: 1px solid rgba(127, 224, 168, 0.4);
+}
+
+.drift-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 680px) {
+  .drift-kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.drift-kpi-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: center;
+}
+
+.drift-kpi-label {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-dim);
+  margin-bottom: 6px;
+}
+
+.drift-kpi-val {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+}
+
+.drift-kpi-sub {
+  display: block;
+  font-size: 10px;
+  color: rgba(238, 242, 248, 0.4);
+  margin-top: 4px;
+}
+
+.text-danger {
+  color: #ff7a7a !important;
+}
+
+.text-warning {
+  color: #ffbe53 !important;
+}
+
+.text-success {
+  color: #7fe0a8 !important;
+}
+
+.text-primary {
+  color: #78aaff !important;
+}
+
+.drift-svg-wrap {
+  width: 100%;
+  background: rgba(4, 9, 20, 0.45);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 6px;
+}
+
+.drift-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart-axis-label {
+  font-size: 10px;
+  fill: #ffffff !important;
+  color: #ffffff;
+  font-family: "JetBrains Mono", monospace;
+}
+

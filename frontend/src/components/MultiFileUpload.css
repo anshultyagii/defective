@@ -1,0 +1,436 @@
+.multi-upload-wrapper {
+  margin: 24px 0 32px;
+  width: 100%;
+}
+
+.multi-upload-card {
+  padding: 36px 24px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1.5px dashed rgba(255, 255, 255, 0.25);
+  background: rgba(8, 14, 28, 0.5) !important;
+}
+
+.multi-upload-card.dropzone-active,
+.popup-dropzone.dropzone-active {
+  border-color: #78aaff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  background: rgba(120, 170, 255, 0.08) !important;
+}
+
+.multi-upload-input {
+  display: none;
+}
+
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0 16px;
+}
+
+.dropzone-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(120, 170, 255, 0.12);
+  border: 1px solid rgba(120, 170, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.upload-svg-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.dropzone-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.dropzone-sub {
+  font-size: 14px;
+  color: var(--ink-dim);
+  max-width: 460px;
+  margin: 0 0 18px;
+  line-height: 1.5;
+}
+
+.format-pills {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.format-pill {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #bcd4ff;
+  padding: 4px 9px;
+  border-radius: 6px;
+}
+
+.format-limit {
+  font-size: 11px;
+  color: rgba(238, 242, 248, 0.45);
+  margin-left: 6px;
+}
+
+.dropzone-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropzone-browse-btn {
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================== STATE 2: QUEUE CARD & BIG FILE ICONS ================== */
+.upload-queue-card {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(8, 14, 28, 0.7) !important;
+}
+
+.queue-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.queue-title-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.queue-main-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.queue-count-tag {
+  font-size: 11px;
+  background: rgba(120, 170, 255, 0.15);
+  border: 1px solid rgba(120, 170, 255, 0.3);
+  color: #bcd4ff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.queue-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Plus (+) Button to Add More */
+.queue-plus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(120, 170, 255, 0.15);
+  border: 1px solid rgba(120, 170, 255, 0.4);
+  color: #bcd4ff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.queue-plus-btn:hover {
+  background: rgba(120, 170, 255, 0.28);
+  border-color: rgba(120, 170, 255, 0.7);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.plus-icon-symbol {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.queue-clear-btn {
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px 6px;
+}
+
+.queue-clear-btn:hover {
+  color: #ffffff;
+}
+
+/* Big File Grid */
+.big-file-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.big-file-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.big-file-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* BIG File Icon */
+.big-file-icon-box {
+  width: 52px;
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.big-file-svg {
+  width: 32px;
+  height: 38px;
+}
+
+.big-file-ext-label {
+  position: absolute;
+  bottom: 8px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* File format specific color accents */
+.icon-ext-csv {
+  color: #7fe0a8;
+  background: rgba(127, 224, 168, 0.12);
+  border: 1px solid rgba(127, 224, 168, 0.3);
+}
+
+.icon-ext-json {
+  color: #ffcf7a;
+  background: rgba(255, 207, 122, 0.12);
+  border: 1px solid rgba(255, 207, 122, 0.3);
+}
+
+.icon-ext-xlsx,
+.icon-ext-xls {
+  color: #78aaff;
+  background: rgba(120, 170, 255, 0.12);
+  border: 1px solid rgba(120, 170, 255, 0.3);
+}
+
+.icon-ext-txt {
+  color: #bcd4ff;
+  background: rgba(188, 212, 255, 0.1);
+  border: 1px solid rgba(188, 212, 255, 0.25);
+}
+
+.big-file-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.big-file-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.big-file-meta {
+  font-size: 11px;
+  color: var(--ink-dim);
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-bullet {
+  opacity: 0.4;
+}
+
+.file-ready-text {
+  color: #7fe0a8;
+}
+
+.big-file-remove-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--ink-dim);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.big-file-remove-btn:hover {
+  background: rgba(255, 122, 122, 0.25);
+  border-color: rgba(255, 122, 122, 0.5);
+  color: #ffffff;
+}
+
+/* Popup Modal for Adding More Files */
+.add-files-popup-card {
+  max-width: 540px !important;
+}
+
+.popup-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popup-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.popup-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.popup-dropzone-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 6px;
+}
+
+.popup-dropzone-sub {
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin: 0 0 20px;
+}
+
+/* Progress Simulation */
+.analysis-progress-block {
+  margin: 20px 0;
+  background: rgba(120, 170, 255, 0.08);
+  border: 1px solid rgba(120, 170, 255, 0.25);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.analysis-status-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #bcd4ff;
+  margin-bottom: 10px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.analysis-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(120, 170, 255, 0.3);
+  border-top-color: #78aaff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.analysis-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.analysis-bar-fill {
+  height: 100%;
+  background: #78aaff;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.multi-upload-submit-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.multi-upload-submit-btn {
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.multi-upload-status {
+  margin: 16px 0 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+.multi-upload-status--error {
+  color: #ff8a7a;
+}
