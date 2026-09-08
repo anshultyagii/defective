@@ -1,0 +1,26 @@
+component_id,lot_id,package,value_0h,value_24h,value_96h,max_temp_early,ground_truth_label,expected_decision,failure_mechanism
+DUT-THERMAL-FAIL-01,LOT-EXCURSION-01,TO-247-4L,10.03,12.62,14.98,184.8,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-02,LOT-EXCURSION-01,TO-247-4L,10.06,12.74,15.16,187.6,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-03,LOT-EXCURSION-01,TO-247-4L,10.09,12.86,15.34,190.4,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-04,LOT-EXCURSION-01,TO-247-4L,10.12,12.98,15.52,193.2,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-05,LOT-EXCURSION-01,TO-247-4L,10.15,13.1,15.7,196.0,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-06,LOT-EXCURSION-01,TO-247-4L,10.18,13.22,15.88,198.8,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-07,LOT-EXCURSION-01,TO-247-4L,10.21,13.34,16.06,201.6,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-08,LOT-EXCURSION-01,TO-247-4L,10.24,13.46,16.24,204.4,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-09,LOT-EXCURSION-01,TO-247-4L,10.27,13.58,16.42,207.2,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-THERMAL-FAIL-10,LOT-EXCURSION-01,TO-247-4L,10.3,13.7,16.6,210.0,THERMAL_OVERSTRESS,FLAG,Die-attach solder fatigue voiding (>35% void ratio)
+DUT-OXIDE-RUPTURE-01,LOT-RUPTURE-02,TO-247-4L,10.14,15.35,24.1,178.5,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-02,LOT-RUPTURE-02,TO-247-4L,10.18,16.2,26.2,182.0,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-03,LOT-RUPTURE-02,TO-247-4L,10.22,17.05,28.3,185.5,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-04,LOT-RUPTURE-02,TO-247-4L,10.26,17.9,30.4,189.0,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-05,LOT-RUPTURE-02,TO-247-4L,10.3,18.75,32.5,192.5,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-06,LOT-RUPTURE-02,TO-247-4L,10.34,19.6,34.6,196.0,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-07,LOT-RUPTURE-02,TO-247-4L,10.38,20.45,36.7,199.5,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-OXIDE-RUPTURE-08,LOT-RUPTURE-02,TO-247-4L,10.42,21.3,38.8,203.0,CATASTROPHIC_FAIL,FLAG,Gate oxide dielectric rupture & micro-channel filamentation
+DUT-LATENT-RUNAWAY-01,LOT-RUNAWAY-03,TO-247-4L,9.98,12.35,15.45,170.2,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-02,LOT-RUNAWAY-03,TO-247-4L,10.01,12.5,15.7,172.4,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-03,LOT-RUNAWAY-03,TO-247-4L,10.04,12.65,15.95,174.6,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-04,LOT-RUNAWAY-03,TO-247-4L,10.07,12.8,16.2,176.8,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-05,LOT-RUNAWAY-03,TO-247-4L,10.1,12.95,16.45,179.0,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-06,LOT-RUNAWAY-03,TO-247-4L,10.13,13.1,16.7,181.2,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability
+DUT-LATENT-RUNAWAY-07,LOT-RUNAWAY-03,TO-247-4L,10.16,13.25,16.95,183.4,LATENT_WEAROUT,FLAG,Non-linear carrier injection & threshold voltage instability

@@ -1,0 +1,27 @@
+.l2-network-nodes {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-l2, 20);
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.net-line {
+  stroke: #ffffff;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.net-node {
+  fill: #ffffff;
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .net-node {
+    opacity: 0.55;
+  }
+}

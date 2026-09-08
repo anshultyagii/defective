@@ -1,0 +1,291 @@
+/* ---------------------------------------------------------------------------
+   DocumentUploadBox.css
+   Self-contained styling for the new "Upload Documents" section shown below
+   Page 1 (revealed on scroll). Uses its own docbox-* class namespace and
+   local CSS variables so it never touches or inherits from the existing
+   dark glass/space theme in LandingPage.css.
+   --------------------------------------------------------------------------- */
+
+.docbox-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px var(--page-gutter, clamp(20px, 5vw, 96px));
+}
+
+.docbox-card {
+  --docbox-blue: #1d4ed8;
+  --docbox-blue-dark: #1e3a8a;
+  --docbox-ink: #0f172a;
+  --docbox-ink-dim: #64748b;
+  --docbox-border: #e2e8f0;
+  --docbox-bg-soft: #f1f5f9;
+
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--docbox-ink);
+}
+
+.docbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: #eef4ff;
+  border-bottom: 1px solid var(--docbox-border);
+}
+
+.docbox-header-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--docbox-ink);
+}
+
+.docbox-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--docbox-blue);
+  flex-shrink: 0;
+}
+
+.docbox-secure-pill {
+  font-size: 13px;
+  font-weight: 600;
+  color: #16a34a;
+  background: #ecfdf3;
+  border: 1px solid #bbf7d0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.docbox-dropzone {
+  position: relative;
+  margin: 24px;
+  padding: 48px 24px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  background: var(--docbox-bg-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.docbox-dropzone:hover {
+  border-color: var(--docbox-blue);
+  background: #eef4ff;
+}
+
+.docbox-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.docbox-dropzone-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: #e0e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.docbox-dropzone-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--docbox-blue);
+}
+
+.docbox-dropzone-title {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--docbox-ink);
+}
+
+.docbox-dropzone-sub {
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: var(--docbox-ink-dim);
+}
+
+.docbox-browse-btn {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* the invisible file input handles the click */
+  background: var(--docbox-blue);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.docbox-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 24px;
+}
+
+.docbox-file-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--docbox-bg-soft);
+  border-radius: 12px;
+}
+
+.docbox-file-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #e0e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.docbox-file-icon {
+  width: 17px;
+  height: 17px;
+  color: var(--docbox-blue);
+}
+
+.docbox-file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.docbox-file-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--docbox-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.docbox-file-meta {
+  font-size: 12.5px;
+  color: var(--docbox-ink-dim);
+}
+
+.docbox-file-check {
+  width: 22px;
+  height: 22px;
+  color: #16a34a;
+  flex-shrink: 0;
+}
+.docbox-file-check svg {
+  width: 100%;
+  height: 100%;
+}
+
+.docbox-file-remove {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--docbox-ink-dim);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 999px;
+}
+.docbox-file-remove:hover {
+  background: #e2e8f0;
+  color: var(--docbox-ink);
+}
+.docbox-file-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.docbox-submit-btn {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 20px 24px 24px;
+  background: var(--docbox-blue-dark);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.docbox-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.docbox-success-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 20px 24px 24px;
+  flex-wrap: wrap;
+}
+
+.docbox-reset-btn {
+  background: transparent;
+  border: 1px solid var(--docbox-blue);
+  color: var(--docbox-blue);
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.docbox-status {
+  margin: 8px 24px 24px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.docbox-status--success {
+  color: #16a34a;
+  margin: 0;
+}
+.docbox-status--error {
+  color: #dc2626;
+}
+
+@media (max-width: 480px) {
+  .docbox-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .docbox-dropzone {
+    padding: 36px 16px;
+  }
+}

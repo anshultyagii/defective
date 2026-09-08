@@ -1,0 +1,11 @@
+{
+  "source_repo": "https://github.com/anshultyagii/defective-ai.git",
+  "branch": "main",
+  "commit_sha": "cc168c874db4bae4288737a03c7f09f4afa55632",
+  "last_synced_at": "2026-09-04T15:01:16.865964+00:00",
+  "files": [
+    "feature_scaler.pkl",
+    "module_a_classifier.pkl",
+    "module_b_regressor.pkl"
+  ]
+}
